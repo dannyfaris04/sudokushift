@@ -98,7 +98,7 @@ pauseButton.addEventListener('click', () => {
 
 backButton.addEventListener('click', () => {
     if (confirm("Are you sure you want to go back? Your current game progress will be lost.")) {
- 		window.location.href = 'index.html';
+ 		window.location.href = 'home.html';
     }
 });
 
