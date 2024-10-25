@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Shift - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="homestyles.css">
+</head>
+<body>
+    <div class="container">
+        <img src="sudokulogo.png" alt="Sudoku Image">
+        <h1>Welcome to SudokuShift</h1>
+        <p>Challenge your mind with our Sudoku puzzles!</p>
+        <div class="slider">
+            <div class="slides">
+                <div class="slide"><a href="#" onclick="chooseEasy()">Easy</a></div>
+                <div class="slide"><a href="#" onclick="chooseMed()">Medium</a></div>
+                <div class="slide"><a href="#" onclick="chooseHard()">Hard</a></div>
+                <div class="slide"><a href="#" onclick="chooseExpert()">Expert</a></div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)">❮</a>
+            <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+        <a href="leaderboard.html" class="button">Leaderboard</a>
+    </div>
+
+<script>
+    let slideIndex = 0;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function showSlides(n) {
+        let slides = document.getElementsByClassName("slide");
+        if (n >= slides.length) { slideIndex = 0; }
+        if (n < 0) { slideIndex = slides.length - 1; }
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex].style.display = "block";
+    }
+
+    function chooseEasy() {
+        const easyLevels = ['easy.html', 'easy2.html', 'easy3.html','easy1.html','easy4.html'];
+        const randomIndex = Math.floor(Math.random() * easyLevels.length);
+        window.location.href = easyLevels[randomIndex];
+    }
+
+    function chooseMed() {
+        const medLevels = ['medium.html', 'medium1.html', 'medium2.html','medium3.html','medium4.html',];
+        const randomIndex = Math.floor(Math.random() * medLevels.length);
+        window.location.href = medLevels[randomIndex]; // Fixed typo
+    }
+
+    function chooseHard() {
+        const hardLevels = ['hard.html', 'hard2.html', 'hard3.html','hard4.html','hard1.html',];
+        const randomIndex = Math.floor(Math.random() * hardLevels.length);
+        window.location.href = hardLevels[randomIndex];
+    }
+
+    function chooseExpert() {
+        const expertLevels = ['expert.html', 'expert2.html', 'expert3.html','expert1.html','expert4.html'];
+        const randomIndex = Math.floor(Math.random() * expertLevels.length);
+        window.location.href = expertLevels[randomIndex];
+    }
+</script>
+</body>
+</html>

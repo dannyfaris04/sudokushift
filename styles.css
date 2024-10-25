@@ -1,0 +1,193 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    text-align: center;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+	font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin-top: 20px;
+    color: #1b1b1b;
+}
+
+.controls {
+    margin-bottom: 20px;
+}
+
+button {
+	font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    color: #ffd700 ;
+    background-color: #1b1b1b;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    color: #1b1b1b;
+    background-color: #ffd700;
+}
+
+button:focus {
+    outline: 2px solid #0056b3;
+    outline-offset: 2px;
+}
+
+.sudoku-container {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 5px;
+    width: 460px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #1b1b1b;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.sudoku-cell {
+ width: 45px;
+ height: 45px;
+ text-align: center;
+ font-size: 20px;
+ border: 2px solid #FCA510;
+ box-sizing: border-box;
+ font-family: 'Comic Sans MS', cursive, sans-serif;
+ line-height: 45px;
+ border-radius: 5px;
+ transition: background-color 0.3s ease;
+ background-color: #ffd700;
+ color: #1b1b1b;
+}
+
+.sudoku-cell {
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    font-size: 20px;
+    border: 1px solid #FCA510;
+    box-sizing: border-box;
+}
+.sudoku-cell:nth-child(3n) {
+    border-right: 4px solid #FCA510;
+}
+.sudoku-cell:nth-child(3n+1) {
+    border-left: 4px solid #FCA510;
+}
+.sudoku-cell:nth-child(n+19):nth-child(-n+27),
+.sudoku-cell:nth-child(n+46):nth-child(-n+54),
+.sudoku-cell:nth-child(n+73):nth-child(-n+81) {
+    border-bottom: 4px solid #FCA510;
+}
+
+.sudoku-cell:nth-child(n+1):nth-child(-n+9),
+.sudoku-cell:nth-child(n+28):nth-child(-n+36),
+.sudoku-cell:nth-child(n+55):nth-child(-n+63) {
+    border-top: 4px solid #FCA510;
+}
+.sudoku-cell.wrong:nth-child(3n) {
+    border-right: 4px solid red;
+}
+.sudoku-cell.wrong:nth-child(3n+1) {
+    border-left: 4px solid red;
+}
+.sudoku-cell.wrong:nth-child(n+19):nth-child(-n+27),
+.sudoku-cell.wrong:nth-child(n+46):nth-child(-n+54),
+.sudoku-cell.wrong:nth-child(n+73):nth-child(-n+81) {
+    border-bottom: 4px solid red;
+}
+
+.sudoku-cell.wrong:nth-child(n+1):nth-child(-n+9),
+.sudoku-cell.wrong:nth-child(n+28):nth-child(-n+36),
+.sudoku-cell.wrong:nth-child(n+55):nth-child(-n+63) {
+    border-top: 4px solid red;
+}
+
+.sudoku-cell.wrong {
+    color: red;
+	border-color: red;
+}
+
+.dark-mode .sudoku-cell:nth-child(3n) {
+    border-right: 4px solid #ffd700;
+}
+
+.dark-mode .sudoku-cell:nth-child(3n+1) {
+    border-left: 4px solid #ffd700;
+}
+.dark-mode .sudoku-cell.wrong:nth-child(3n) {
+    border-right: 4px solid red;
+}
+
+.dark-mode .sudoku-cell.wrong:nth-child(3n+1) {
+    border-left: 4px solid red;
+}
+
+.dark-mode .sudoku-cell:nth-child(n+19):nth-child(-n+27),
+.dark-mode .sudoku-cell:nth-child(n+46):nth-child(-n+54),
+.dark-mode .sudoku-cell:nth-child(n+73):nth-child(-n+81) {
+    border-bottom: 4px solid #ffd700;
+}
+
+.dark-mode .sudoku-cell.wrong:nth-child(n+19):nth-child(-n+27),
+.dark-mode .sudoku-cell.wrong:nth-child(n+46):nth-child(-n+54),
+.dark-mode .sudoku-cell.wrong:nth-child(n+73):nth-child(-n+81) {
+    border-bottom: 4px solid red;
+}
+
+.dark-mode .sudoku-cell:nth-child(n+1):nth-child(-n+9),
+.dark-mode .sudoku-cell:nth-child(n+28):nth-child(-n+36),
+.dark-mode .sudoku-cell:nth-child(n+55):nth-child(-n+63) {
+    border-top: 4px solid #ffd700;
+}
+
+.dark-mode .sudoku-cell.wrong:nth-child(n+1):nth-child(-n+9),
+.dark-mode .sudoku-cell.wrong:nth-child(n+28):nth-child(-n+36),
+.dark-mode .sudoku-cell.wrong:nth-child(n+55):nth-child(-n+63) 
+{
+    border-top: 4px solid red;
+}
+
+.sudoku-cell:focus {
+    outline: none;
+    background-color: #e0f7fa;
+}
+
+.dark-mode {
+    background-color: #1b1b1b;
+    color: #fff;
+}
+.dark-mode h1 {
+	color: #fff;
+}
+.dark-mode button {
+    background-color: #ffd700;
+    color: #1b1b1b;
+}
+
+.dark-mode button:hover {
+    background-color: #1b1b1b;
+    color: #ffd700;
+}
+
+.dark-mode .sudoku-cell {
+    border-color: #1b1b1b;
+    background-color: #1b1b1b;
+    color: #ffd700;
+}
+.dark-mode .sudoku-container {
+    background-color: #fff;
+}
+.dark-mode .sudoku-cell.wrong {
+    color: red;
+	border-color: red;
+}
+.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}

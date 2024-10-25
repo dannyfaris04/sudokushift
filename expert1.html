@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Sudoku Shift - Expert</title>
+</head>
+<body>
+    <h1>Sudoku - Expert</h1>
+    <div class="controls">
+        <span id="timer">Time: 0:00</span>
+        <button id="pause-btn">Pause</button>
+        <span id="score">Score: 0</span>
+        <button id="hint-btn">Hint (-2 points)</button>
+        <button id="dark-mode-btn">Toggle Dark Mode</button>
+		<button id="back-btn">Back</button>
+    </div>
+    <div class="sudoku-container"></div>
+    <script src="scriptexp1.js"></script>
+    <script>
+        loadPuzzles('expert');
+    </script>
+</body>
+</html>

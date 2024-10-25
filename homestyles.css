@@ -1,0 +1,95 @@
+body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #1b1b1b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 60px 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin-bottom: 20px;
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            font-size: 16px;
+            color: #1b1b1b;
+            background-color: #ffd700;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .button:hover {
+            background-color: #1b1b1b;
+            color: #ffd700;
+        }
+        img {
+            max-width: 30%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .slider {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+        .slide {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+        .slide a {
+            display: block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #ffd700;
+            background-color: #1b1b1b;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .slide a:hover {
+            background-color: rgba(0,0,0,1);
+            color: #ffd700;
+        }
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 35%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        .prev {
+            left: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        .prev:hover, .next:hover {
+            background-color: rgba(0,0,0,0.8);
+        }
